@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-green-500 p-2 rounded mx-4 lg:mx-auto lg:w-1/2">
+  <div class="bg-gradient-to-tr from-pink-200 to-pink-700  p-2 rounded mx-4 lg:mx-auto lg:w-1/2">
     <input
       class="p-1 rounded w-full"
       v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new task" />
     <ul class="grid gap-4 my-2 overflow-y-auto">
-      <li v-for="todo in todos" :key="todo.id" class="rounded p-1 bg-green-400 backdrop-blur-sm">
-        <p>{{ todo.text }}</p>        
-        <button @click="deleteTodo(todo.id)" class="bg-red-500 text-white p-1 rounded">Delete</button>
+      <li v-for="todo in todos" :key="todo.id" class="rounded p-2 bg-pink-500 bg-opacity-50 backdrop-filter backdrop-blur-lg space-y-2">
+        <p class="text-white">{{ todo.text }}</p>        
+        <button @click="deleteTodo(todo.id)" class="bg-red-700 text-white p-1 rounded">Delete</button>
       </li>
     </ul>
   </div>
